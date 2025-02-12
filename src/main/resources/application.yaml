@@ -5,7 +5,7 @@ datasources:
   default:
     url: jdbc:mysql:////localhost:3306/mn_playground
     username: root
-    password: password
+    password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
 flyway:
   datasources:
