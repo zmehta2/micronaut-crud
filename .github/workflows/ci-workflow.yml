@@ -22,9 +22,6 @@ jobs:
     services:
       mysql:
         image: mysql:5.7
-        env:
-          MYSQL_ROOT_PASSWORD: rootpassword
-          MYSQL_DATABASE: mn_playground
         ports:
           - 3306:3306
         options: --health-cmd="mysqladmin ping --silent" --health-timeout=10s --health-retries=5
