@@ -1,10 +1,9 @@
 package com.piyal.repository;
 
 import com.piyal.model.Book;
-import io.micronaut.data.jdbc.annotation.JdbcRepository;
-import io.micronaut.data.model.query.builder.sql.Dialect;
-import io.micronaut.data.repository.CrudRepository;
+import io.micronaut.data.annotation.Repository;
+import io.micronaut.data.jpa.repository.JpaRepository;
 
-@JdbcRepository(dialect = Dialect.MYSQL)
-public interface BookRepository extends CrudRepository<Book, Long> {
+@Repository
+public interface BookRepository extends JpaRepository<Book, Long> {
 }

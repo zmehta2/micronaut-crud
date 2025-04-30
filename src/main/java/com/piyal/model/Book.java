@@ -1,17 +1,19 @@
 package com.piyal.model;
 
-import io.micronaut.data.annotation.MappedEntity;
-import io.micronaut.data.annotation.Id;
 import io.micronaut.serde.annotation.Serdeable;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@MappedEntity(value = "books")
+@Entity
+@Table(name = "books")
 @Serdeable
-@AllArgsConstructor
-@NoArgsConstructor
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Book {
     @Id
     private Long id;
